@@ -1,93 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cine colombia</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cine Colombia - Tu Portal de Películas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icono-cinecolombia.png" type="image/png">
 </head>
-<body>
+<body class="tema-cine">
 
-    <!-- Dentro del body -->
-<div class="login" id="login-btn">
-  <img src="Imagenes/imagen3.png" alt="">
-  <span id="user-status">Iniciar sesión</span>
-</div>
+  <header>
+    <h1>Cine Colombia</h1>
+    <input type="text" id="buscador" placeholder="Buscar película..." oninput="buscarPelicula()">
+  </header>
 
+  <main>
+    <section id="inicio" class="seccion">
+      <h2>Bienvenido a Cine Colombia</h2>
+      <p>Explora la mejor selección de películas, reserva tus entradas y vive la magia del cine como nunca antes.</p>
+    </section>
 
-    <div class="contenedor">
-        <div class="encabezado">
-            <div class="menu">
-                <img src="Imagenes/imagen2.png" alt="">
-            </div>
-            <div class="imagen">
-                <img src="Imagenes/imagen1.jpeg" alt="">
-            </div>
-            <div class="login">
-                <img src="Imagenes/imagen3.png" alt="">
-            </div>
-        </div>
+    <section id="cartelera" class="seccion oculto">
+      <h2>🎞️ Cartelera</h2>
+      <div id="cartelera-lista" class="grid-cartelera"></div>
+    </section>
 
-        <div class="caja1">
-            <div class="portada">
-                <img src="Imagenes/fondo.png" alt="">
-            </div>
-            <div class="Descripcion">
-                <img src="Imagenes/backgroundp.png" alt=""> <!-- Imagen de fondo -->
-                <div class="resumen">
-                    <h1>Captain America: Brave New World</h1>
-                    <p>Título en español: Capitán América: Un Nuevo Mundo</p>
-                    <p>Estreno: 13-Feb-2025</p>
-                    <p>Acción, Aventura, Ciencia Ficción</p>
-                    <div class="lista">
-                        <li>Recomendada para Mayores de 12 años</li>
-                        <li>118min</li>
-                </div> 
-                </div>
-            </div>
-        </div>
+    <section id="favoritos" class="seccion oculto">
+      <h2>⭐ Mis Películas Favoritas</h2>
+      <div id="favoritos-lista">
+        <p>Aquí aparecerán las películas que marques como favoritas.</p>
+      </div>
+    </section>
 
-        <div class="caja2">
-            <div class="portada">
-                <img src="Imagenes/pelicula2.png" alt="">
-            </div>
-            <div class="Descripcion">
-                <img src="Imagenes/pelicula2d.jpg" alt=""> <!-- Imagen de fondo -->
-                <div class="resumen">
-                    <h1>Conclave</h1>
-                    <p>Título en español: Cónclave</p>
-                    <p>Estreno: 20-Feb-2025</p>
-                    <p>Drama,Suspenso</p>
-                    <div class="lista">
-                        <li>Recomendada para Mayores de 12 años</li>
-                        <li>120min</li>
-                </div>
-                </div>
-            </div>
-        </div>
+    <section id="registro" class="seccion oculto">
+      <h2>📝 Registro de Usuario</h2>
+      <form id="registro-form">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <input type="password" id="contraseña" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
 
-        <div class="caja3">
-            <div class="portada">
-                <img src="Imagenes/pelicula3p.png" alt="">
-            </div>
-            <div class="Descripcion">
-                <img src="Imagenes/pelicula3d.jpg" alt=""> <!-- Imagen de fondo -->
-                <div class="resumen">
-                    <h1>The Monkey</h1>
-                    <p>Título en español: El Mono</p>
-                    <p>Estreno: 20-Feb-2025</p>
-                    <p>Terror</p>
-                    <div class="lista">
-                            <li>Exclusiva para mayores de 15 años</li>
-                            <li>95min</li>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section id="contacto" class="seccion oculto">
+      <h2>📬 Contáctanos</h2>
+      <p>¿Tienes preguntas, sugerencias o quieres colaborar con nosotros?</p>
+      <ul class="contacto-info">
+        <li>✉️ Correo: contacto@cinecolombia.com</li>
+        <li>🏢 Dirección: Calle 100 #19-20, Bogotá, Colombia</li>
+        <li>📞 Teléfono: +57 1 234 5678</li>
+      </ul>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <button onclick="mostrarSeccion('inicio')">Inicio</button>
+    <button onclick="mostrarSeccion('cartelera')">Cartelera</button>
+    <button onclick="mostrarSeccion('favoritos')">Favoritos</button>
+    <button onclick="mostrarSeccion('registro')">Registro</button>
+    <button onclick="mostrarSeccion('contacto')">Contacto</button>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

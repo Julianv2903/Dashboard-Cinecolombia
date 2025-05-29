@@ -1,156 +1,111 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-color: rgb(255, 255, 255);
+  background-color: #0b1624;
+  color: #e6e6e6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.contenedor{
-    margin: auto;
-    width: 100%;
-    background-color: black;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-
-    border-radius: 20px;
-}
-/* 📌 Estilos del encabezado */
-.encabezado {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(38, 38, 94);
-    border-radius: 20px ;
+header {
+  background-color: #0f224d;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu, .imagen, .login {
-    height: 50px;
-    width: 50px;
-    background-color: rgb(38, 38, 94);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border-radius: 20px;
+h1 {
+  color: #fdb813;
+  font-size: 1.8rem;
 }
 
-.imagen {
-    width: 300px;
-    background-color: rgb(80, 80, 96);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#buscador {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
 }
 
-img {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 5%;
-}
-img:hover{
-    width: 110%;
-    height: 110%;
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 📌 Contenedor principal */
-.caja1, .caja2, .caja3 {
-    margin-top: 10px;
-    width: 100%;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-bottom: solid 2px #ffffff;
-}
-.caja1{
-    background-image: url(Imagenes/background.png);
-}
-.caja2{
-    background-image: url(Imagenes/palicula2f.jpg);
-}
-/* 📌 Portada */
-.portada {
-    height: 300px;
-    width: 200PX;
-    margin-bottom: 10px;
+.seccion {
+  margin-bottom: 30px;
 }
 
-/* 📌 Contenedor de la imagen y texto */
-.Descripcion {
-    width: 80%;
-    height: 300px;
-    position: relative; /* 📌 IMPORTANTE para que el texto se posicione dentro */
-    display: flex;
-    align-items: center; /* 📌 Centra el contenido verticalmente */
-    justify-content: flex-start; /* 📌 Alinea el texto a la izquierda */
-    overflow: hidden;
+.oculto {
+  display: none;
 }
 
-/* 📌 Imagen dentro de .Descripcion */
-.Descripcion img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute; /* 📌 Hace que la imagen de fondo no genere espacio extra */
-    top: 0;
-    left: 0;
-    z-index: 0;
+h2 {
+  color: #fdb813;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fdb813;
+  padding-bottom: 5px;
 }
 
-/* 📌 Texto sobre la imagen */
-.resumen {
-    position: absolute;
-    left: 10px; /* 📌 Pegado al lado izquierdo */
-    top: 50%;
-    transform: translateY(-50%); /* 📌 Centrado verticalmente */
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.15); /* 📌 Fondo oscuro para mejor visibilidad */
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left; /* 📌 Asegura que el texto esté alineado a la izquierda */
-    max-width: 50%; /* 📌 Para que el texto no se extienda demasiado */
-    z-index: 1; /* 📌 Hace que el texto esté sobre la imagen */
+form {
+  background-color: #142c57;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
 }
 
-.resumen h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+form input, form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
 }
 
-.resumen p {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 16px;
-    margin: 5px 0;
+form input {
+  background-color: #0b1624;
+  color: #e6e6e6;
+  border: 1px solid #284b8f;
 }
-.resumen:hover{
-    
-    background: rgba(0, 0, 0, 0.7); /* 📌 Fondo oscuro para mejor visibilidad */
 
+form input:focus {
+  border-color: #fdb813;
+  outline: none;
 }
-.lista{
-    list-style: none;  /* Quita los estilos de lista */
-    padding: 0;
-    display: flex;  /* 📌 Hace que los elementos se alineen horizontalmente */
-    gap: 10px; /* Espaciado entre los elementos */
+
+form button {
+  background-color: #fdb813;
+  font-weight: 700;
+  color: #0b1624;
+  cursor: pointer;
 }
-.lista li{
-    background-color: #fffbfb; /* Color de fondo */
-    color: rgb(0, 0, 0);
-    margin-top: 10px;
-    padding: 8px 8px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer;
-    transition: background 0.3s;
-    text-align: center;
-    font-size: 12px;
-    min-width: 120px; /* Evita que se achiquen demasiado */
+
+form button:hover {
+  background-color: #d99f0b;
 }
-.lista li:hover{
-    background: rgba(215, 213, 224, 0.7); /* 📌 Fondo oscuro para mejor visibilidad */
+
+footer {
+  background-color: #0f224d;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+footer button {
+  background-color: #fdb813;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1624;
+}
+
+footer button:hover {
+  background-color: #d99f0b;
 }
