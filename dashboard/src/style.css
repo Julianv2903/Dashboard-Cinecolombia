@@ -1,0 +1,217 @@
+/* Reset básico y body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #0b1624;
+  color: #e6e6e6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #0f224d;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header h1 {
+  color: #fdb813;
+  font-weight: 700;
+  font-size: 1.8rem;
+  flex: 1 1 300px;
+}
+#buscador {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+/* Secciones */
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+.seccion {
+  margin-bottom: 30px;
+}
+.oculto {
+  display: none;
+}
+h2 {
+  color: #fdb813;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fdb813;
+  padding-bottom: 5px;
+}
+
+/* Grid cartelera */
+.grid-cartelera {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 20px;
+}
+
+/* Película item */
+.pelicula {
+  background-color: #142c57;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.pelicula img {
+  width: 100%;
+  border-radius: 6px;
+  height: 270px;
+  object-fit: cover;
+}
+.pelicula h4 {
+  font-size: 1.1rem;
+}
+.pelicula p {
+  font-size: 0.9rem;
+  color: #d0d7e8;
+}
+
+/* Botones de acción en la película */
+.btn-fav, .btn-carrito {
+  background-color: #fdb813;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b1624;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+.btn-fav:hover, .btn-carrito:hover {
+  background-color: #d99f0b;
+}
+
+/* Contenedor favoritos */
+#favoritos-lista, #carrito-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.favorito-item, .carrito-item {
+  background-color: #142c57;
+  padding: 10px;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  position: relative;
+}
+.favorito-item h4, .carrito-item h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fdb813;
+}
+.favorito-item button, .carrito-item button {
+  margin-top: 10px;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+.favorito-item button:hover, .carrito-item button:hover {
+  background-color: #b71c1c;
+}
+
+/* Botón comprar en carrito */
+#comprar-btn {
+  margin-top: 20px;
+  background-color: #fdb813;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0b1624;
+  transition: background-color 0.3s ease;
+}
+#comprar-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+#comprar-btn:hover:not(:disabled) {
+  background-color: #d99f0b;
+}
+
+/* Formularios */
+form {
+  background-color: #142c57;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-top: 15px;
+}
+form input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+form button {
+  width: 100%;
+  background-color: #fdb813;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0b1624;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+form button:hover {
+  background-color: #d99f0b;
+}
+
+/* Footer */
+footer {
+  background-color: #0f224d;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+button {
+  background-color: #fdb813;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0b1624;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #d99f0b;
+}

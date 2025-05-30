@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cine Colombia - Tu Portal de Películas</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="icon" href="icono-cinecolombia.png" type="image/png" />
+</head>
+<body class="tema-cine">
+  <header>
+    <h1>Cine Colombia</h1>
+    <input type="text" id="buscador" placeholder="Buscar película..." oninput="buscarPelicula()" />
+
+    <button onclick="mostrarSeccion('inicio')">Inicio</button>
+    <button onclick="mostrarSeccion('cartelera')">Cartelera</button>
+    <button onclick="mostrarSeccion('favoritos')">Favoritos</button>
+    <button onclick="mostrarSeccion('carrito')">Carrito</button>
+    <button onclick="mostrarSeccion('registro')">Registro / Login</button>
+    <button onclick="mostrarSeccion('contacto')">Contacto</button>
+  </header>
+
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="seccion">
+      <h2>Bienvenido a Cine Colombia</h2>
+      <p>Explora la mejor selección de películas, reserva tus entradas y vive la magia del cine como nunca antes.</p>
+    </section>
+
+    <!-- Sección Cartelera -->
+    <section id="cartelera" class="seccion oculto">
+      <h2>🎞️ Cartelera</h2>
+      <div id="cartelera-lista" class="grid-cartelera">
+        <!-- Películas cargadas desde API -->
+      </div>
+    </section>
+
+    <!-- Sección Favoritos -->
+    <section id="favoritos" class="seccion oculto">
+      <h2>⭐ Mis Películas Favoritas</h2>
+      <div id="favoritos-lista">
+        <p>No tienes favoritos aún.</p>
+      </div>
+    </section>
+
+    <!-- Sección Carrito -->
+    <section id="carrito" class="seccion oculto">
+      <h2>🛒 Carrito de Compras</h2>
+      <div id="carrito-lista">
+        <p>Tu carrito está vacío.</p>
+      </div>
+      <button id="comprar-btn" disabled>Comprar Entradas</button>
+    </section>
+
+    <!-- Sección Registro y Login -->
+    <section id="registro" class="seccion oculto">
+      <h2>📝 Registro de Usuario</h2>
+      <form id="registro-form">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="password" id="contraseña" placeholder="Contraseña" required />
+        <button type="submit">Registrarse</button>
+      </form>
+      <hr />
+      <h2>🔑 Iniciar Sesión</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Correo electrónico" required />
+        <input type="password" id="login-contraseña" placeholder="Contraseña" required />
+        <button type="submit">Ingresar</button>
+      </form>
+      <p id="mensaje-login" style="color:red;"></p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="seccion oculto">
+      <h2>📬 Contáctanos</h2>
+      <p>¿Tienes preguntas, sugerencias o quieres colaborar con nosotros?</p>
+      <ul class="contacto-info">
+        <li>✉️ Correo: contacto@cinecolombia.com</li>
+        <li>🏢 Dirección: Calle 100 #19-20, Bogotá, Colombia</li>
+        <li>📞 Teléfono: +57 1 234 5678</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <button onclick="mostrarSeccion('inicio')">Inicio</button>
+    <button onclick="mostrarSeccion('cartelera')">Cartelera</button>
+    <button onclick="mostrarSeccion('favoritos')">Favoritos</button>
+    <button onclick="mostrarSeccion('carrito')">Carrito</button>
+    <button onclick="mostrarSeccion('registro')">Registro / Login</button>
+    <button onclick="mostrarSeccion('contacto')">Contacto</button>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
